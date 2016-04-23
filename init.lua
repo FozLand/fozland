@@ -1,3 +1,13 @@
-local modpath = minetest.get_modpath("fozland")
+local load_time_start = os.clock()
 
-dofile(modpath.."/migrate.lua")
+local modpath = minetest.get_modpath('fozland')
+
+dofile(modpath..'/migrate.lua')
+
+minetest.log(
+	'action',
+	string.format(
+		'['..minetest.get_current_modname()..'] loaded in %.3fs',
+		os.clock() - load_time_start
+	)
+)
