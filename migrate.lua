@@ -45,6 +45,8 @@ for mod,varieties in pairs(blocks) do
 				local from_node = "moreblocks:"..node_string
 				local to_node   =  mod..":"..node_string
 
+				minetest.register_alias(from_node, to_node)
+
 				table.insert(from_nodes, from_node)
 				to_nodes[from_node] = to_node
 
