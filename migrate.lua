@@ -64,7 +64,7 @@ minetest.register_lbm({
 		local new_node = node
 		new_node.name = to_nodes[node.name]
 		minetest.log('action',"lbm changing "..node_name.." to "..new_node.name..
-			" at "..pos.x..","..pos.y..","..pos.z)
+			" at "..minetest.pos_to_string(pos))
 
 		minetest.set_node(pos, new_node)
 	end,
