@@ -3,6 +3,7 @@ local load_time_start = os.clock()
 local modpath = minetest.get_modpath('fozland')
 
 dofile(modpath..'/migrate.lua')
+dofile(modpath..'/dig_up.lua')
 
 minetest.log(
 	'action',
