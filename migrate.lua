@@ -41,9 +41,6 @@ local types	= {
 	stair_ = {"","_half","_inner","_outer","_alt","_alt_1","_alt_2","_alt_4"},
 }
 
-local from_nodes = {} -- array of nodes to change
-local to_nodes = {}		-- table of nodes name keyed to the from node value
-
 for mod,varieties in pairs(blocks) do
   for _,variety in ipairs(varieties) do
 
@@ -57,25 +54,8 @@ for mod,varieties in pairs(blocks) do
 
 				minetest.register_alias(from_node, to_node)
 
-				table.insert(from_nodes, from_node)
-				to_nodes[from_node] = to_node
-
 			end
 		end
 
 	end
 end
-
-minetest.register_lbm({
-	name = "fozland:replace_moreblocks_bakedclay_and_bamboo",
-	nodenames = from_nodes,
-	action = function(pos, node)
-		local node_name = node.name -- remember the old node's name for the log
-		local new_node = node
-		new_node.name = to_nodes[node.name]
-		minetest.log('action',"lbm changing "..node_name.." to "..new_node.name..
-			" at "..minetest.pos_to_string(pos))
-
-		minetest.set_node(pos, new_node)
-	end,
-})
