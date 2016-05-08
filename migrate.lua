@@ -14,7 +14,17 @@ local blocks = {
 		"green",  "cyan",  "blue",  "magenta",   "orange",
 		"violet", "brown", "pink",  "dark_grey", "dark_green"
 	},
-	bamboo = {"block", "block_dry"}
+	bamboo = {"block", "block_dry"},
+	default = {
+		"stone", "cobble", "mossycobble", "brick", "sandstone",
+		"steelblock", "goldblock", "copperblock", "bronzeblock", "diamondblock",
+		"desert_stone", "desert_cobble",
+		"meselamp", "glass",
+		"tree", "wood", "jungletree", "junglewood",
+		"pine_tree", "pine_wood", "acacia_tree", "acacia_wood",
+		"obsidian", "obsidian_glass",
+		"stonebrick", "desert_stonebrick", "sandstonebrick", "obsidianbrick",
+	},
 }
 
 local types	= {
