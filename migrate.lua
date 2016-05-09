@@ -8,25 +8,6 @@ Fozland block migrations
 
 --]]
 
-local blocks = {
-	bakedclay = {
-		"white",  "grey",  "black", "red",       "yellow",
-		"green",  "cyan",  "blue",  "magenta",   "orange",
-		"violet", "brown", "pink",  "dark_grey", "dark_green"
-	},
-	bamboo = {"block", "block_dry"},
-	default = {
-		"stone", "cobble", "mossycobble", "brick", "sandstone",
-		"steelblock", "goldblock", "copperblock", "bronzeblock", "diamondblock",
-		"desert_stone", "desert_cobble",
-		"meselamp", "glass",
-		"tree", "wood", "jungletree", "junglewood",
-		"pine_tree", "pine_wood", "acacia_tree", "acacia_wood",
-		"obsidian", "obsidian_glass",
-		"stonebrick", "desert_stonebrick", "sandstonebrick", "obsidianbrick",
-	},
-}
-
 local types	= {
 	micro_ = {"","_1","_2","_4","_12","_14","_15"},
 	panel_ = {"","_1","_2","_4","_12","_14","_15"},
@@ -39,6 +20,89 @@ local types	= {
 		"_outer_cut","_outer_cut_half","_outer_cut_half_raised",
 		"_cut"},
 	stair_ = {"","_half","_inner","_outer","_alt","_alt_1","_alt_2","_alt_4"},
+}
+
+-- handle mod contained renames
+local mod_blocks = {
+	castle = {
+		pavement = "pavement_brick",
+		pavement_bricks = "pavement_brick",
+	},
+}
+
+for mod,varieties in pairs(mod_blocks) do
+  for from_name,to_name in pairs(varieties) do
+
+		for prefix, alternates in pairs(types) do
+			for _,alt in ipairs(alternates) do
+
+				local from_node_string = prefix..from_name..alt
+				local to_node_string   = prefix..to_name..alt
+
+				local from_node =	mod..":"..from_node_string
+				local to_node   = mod..":"..to_node_string
+
+				minetest.register_alias(from_node, to_node)
+
+			end
+		end
+
+	end
+end
+
+-- handle blocks moved to default
+local default_blocks = {
+	moreblocks = {
+		pinetree = "pine_tree",
+	},
+	moretrees = {
+		acacia_planks = "acacia_wood",
+		acacia_trunk = "acacia_tree",
+		pine_planks = "pine_wood",
+		pine_trunk = "pine_tree",
+		jungletree_planks = "junglewood",
+	}
+}
+
+for mod,varieties in pairs(default_blocks) do
+  for from_name,to_name in pairs(varieties) do
+
+		for prefix, alternates in pairs(types) do
+			for _,alt in ipairs(alternates) do
+
+				local from_node_string = prefix..from_name..alt
+				local to_node_string   = prefix..to_name..alt
+
+				local from_node = mod..":"..from_node_string
+				local to_node   = "default:"..to_node_string
+
+				minetest.register_alias(from_node, to_node)
+
+			end
+		end
+
+	end
+end
+
+-- handle blocks moved out of moreblocks
+local blocks = {
+	bakedclay = {
+		"white",  "grey",  "black", "red",       "yellow",
+		"green",  "cyan",  "blue",  "magenta",   "orange",
+		"violet", "brown", "pink",  "dark_grey", "dark_green"
+	},
+	bamboo = {"block", "block_dry"},
+	castle = {"pavement"},
+	default = {
+		"stone", "cobble", "mossycobble", "brick", "sandstone",
+		"steelblock", "goldblock", "copperblock", "bronzeblock", "diamondblock",
+		"desert_stone", "desert_cobble",
+		"meselamp", "glass",
+		"tree", "wood", "jungletree", "junglewood",
+		"pine_tree", "pine_wood", "acacia_tree", "acacia_wood",
+		"obsidian", "obsidian_glass",
+		"stonebrick", "desert_stonebrick", "sandstonebrick", "obsidianbrick",
+	},
 }
 
 for mod,varieties in pairs(blocks) do
