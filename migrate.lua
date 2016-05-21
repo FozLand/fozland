@@ -54,6 +54,7 @@ end
 local default_blocks = {
 	moreblocks = {
 		pinetree = "pine_tree",
+		pinewood = "pine_wood",
 	},
 	moretrees = {
 		acacia_planks = "acacia_wood",
