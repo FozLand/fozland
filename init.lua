@@ -5,6 +5,7 @@ local modpath = minetest.get_modpath('fozland')
 dofile(modpath..'/migrate.lua')
 dofile(modpath..'/dig_up.lua')
 dofile(modpath..'/stack_max.lua')
+dofile(modpath..'/drop_leaves.lua')
 
 minetest.log(
 	'action',
