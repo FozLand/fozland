@@ -6,6 +6,7 @@ dofile(modpath..'/migrate.lua')
 dofile(modpath..'/dig_up.lua')
 dofile(modpath..'/stack_max.lua')
 dofile(modpath..'/drop_leaves.lua')
+dofile(modpath..'/sawables.lua')
 
 minetest.log(
 	'action',

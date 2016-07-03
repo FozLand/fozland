@@ -1,3 +1,8 @@
 default
+bakedclay
+bamboo
+colouredstonebricks
+wool
+moreblocks?
 moretrees?
 snow?
