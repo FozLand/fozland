@@ -2,12 +2,15 @@ big_stacks = {
 	'default:cobble',
 	'default:dirt',
 	'default:paper',
-	'farming:weed',
 	'default:acacia_leaves',
 	'default:aspen_leaves',
 	'default:jungleleaves',
 	'default:leaves',
 }
+
+if minetest.get_modpath('farming_plus') then
+	table.insert(big_stacks, 'farming:weed')
+end
 
 if moretrees then
 	table.insert(big_stacks, 'moretrees:apple_tree_leaves')
