@@ -1,5 +1,3 @@
-
-
 if core.get_modpath( 'moreblocks' ) then
 
 	local dyes = {'white', 'grey', 'black', 'red', 'yellow', 'green', 'cyan',
@@ -15,7 +13,7 @@ if core.get_modpath( 'moreblocks' ) then
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
-		local def = minetest.registered_nodes[nodename]
+		local def = table.copy(minetest.registered_nodes[nodename])
 		def.groups.bakedclay = nil
 		stairsplus:register_all(mod, name, nodename, def)
 	end
@@ -26,7 +24,7 @@ if core.get_modpath( 'moreblocks' ) then
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
-		local def = minetest.registered_nodes[nodename]
+		local def = table.copy(minetest.registered_nodes[nodename])
 		stairsplus:register_all(mod, name, nodename, def)
 	end
 
@@ -38,7 +36,7 @@ if core.get_modpath( 'moreblocks' ) then
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
-		local def = minetest.registered_nodes[nodename]
+		local def = table.copy(minetest.registered_nodes[nodename])
 		stairsplus:register_all(mod, name, nodename, def)
 	end
 
@@ -48,7 +46,7 @@ if core.get_modpath( 'moreblocks' ) then
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
-		local def = minetest.registered_nodes[nodename]
+		local def = table.copy(minetest.registered_nodes[nodename])
 		def.groups.wool = nil
 		stairsplus:register_all(mod, name, nodename, def)
 	end
