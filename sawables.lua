@@ -1,4 +1,4 @@
-if core.get_modpath( 'moreblocks' ) then
+if core.global_exists('stairsplus') then
 
 	local dyes = {'white', 'grey', 'black', 'red', 'yellow', 'green', 'cyan',
 								'blue', 'magenta', 'orange', 'violet', 'brown', 'pink',
