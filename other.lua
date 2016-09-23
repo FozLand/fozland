@@ -10,16 +10,13 @@ if minetest.get_modpath('bones') then
 end
 
 minetest.register_craft({
- 	type = "shapeless",
- 	output = "default:sand",
- 	recipe = {"default:cobble"}
- })
-
-
-
+	type = 'shapeless',
+	output = 'default:sand',
+	recipe = {'default:cobble'}
+})
 
 minetest.register_craft({
- 	type = "shapeless",
- 	output = "default:dirt 2" ,
- 	recipe = {"default:sand", "default:sand"}
+	type = 'shapeless',
+	output = 'default:dirt 2',
+	recipe = {'default:sand', 'default:sand'}
  })
