@@ -7,3 +7,7 @@ farming_plus?
 moreblocks?
 moretrees?
 snow?
+landrush?
+homedecor?
+cottages?
+drop_on_death?

@@ -8,6 +8,7 @@ dofile(modpath..'/stack_max.lua')
 dofile(modpath..'/drop_leaves.lua')
 dofile(modpath..'/sawables.lua')
 dofile(modpath..'/other.lua')
+dofile(modpath..'/rightclick.lua')
 
 minetest.log(
 	'action',
