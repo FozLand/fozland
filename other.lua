@@ -29,11 +29,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'default:dirt 6',
+	output = 'default:dirt 4',
 	recipe = {
 		{'group:leaves', 'group:leaves', 'group:leaves'},
-		{'default:clay', 'default:clay', 'default:clay'},
-		{'group:sand',   'group:sand',   'group:sand'  }
+		{'default:clay', 'default:clay', 'group:leaves'},
+		{'group:sand',   'group:sand',   'group:leaves'}
 	}
 })
 
