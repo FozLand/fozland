@@ -32,7 +32,7 @@ minetest.register_craft({
 	output = 'default:dirt 6',
 	recipe = {
 		{'group:leaves', 'group:leaves', 'group:leaves'},
-	        {'default:clay', 'default:clay', 'default:clay'},
+		{'default:clay', 'default:clay', 'default:clay'},
 		{'group:sand',   'group:sand',   'group:sand'  }
 	}
 })
@@ -50,17 +50,16 @@ minetest.register_craft({
 	recipe = {'default:desert_sand'}
 })
 
--- Change the default TNT recipe to make it more expensive, but not too Expensive.
-
+-- Change the default TNT recipe to make it more expensive, but not too
+-- expensive.
 if minetest.get_modpath('tnt') then
 	minetest.clear_craft({output = 'tnt:tnt'})
-	
 	minetest.register_craft({
-		output = 'tnt:tnt'
+		output = 'tnt:tnt',
 		recipe = {
-			{'          ', 'default:flint', '          '},
+			{''          , 'default:flint', ''          },
 			{'group:wood', 'tnt:gunpowder', 'group:wood'},
-			{'          ', 'group:wood'   , '          '}
+			{''          , 'group:wood'   , ''          }
+		}
 	})
 end
-			
