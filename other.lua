@@ -63,3 +63,19 @@ if minetest.get_modpath('tnt') then
 		}
 	})
 end
+
+-- Sugar conversions
+minetest.register_craft({
+	type = 'shapeless',
+	output = 'bushes:sugar',
+	recipe = {
+		'mtfoods:sugar', 'mtfoods:sugar', 'mtfoods:sugar',
+		'mtfoods:sugar', 'mtfoods:sugar', 'mtfoods:sugar'
+	}
+})
+
+minetest.register_craft({
+	type = 'shapeless',
+	output = 'mtfoods:sugar 6',
+	recipe = {'bushes:sugar'}
+})
