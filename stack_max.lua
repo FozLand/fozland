@@ -3,13 +3,17 @@ big_stacks = {
 	'default:gravel',
 	'default:sand',
 	'default:desert_sand',
+	'default:silver_sand',
 	'default:clay',
 	'default:dirt',
 	'default:paper',
 	'default:acacia_leaves',
+	'default:acacia_bush_leaves',
 	'default:aspen_leaves',
 	'default:jungleleaves',
 	'default:leaves',
+	'default:bush_leaves',
+	'default:pine_needles',
 }
 
 if minetest.get_modpath('farming_plus') then
@@ -34,6 +38,7 @@ end
 
 if minetest.get_modpath('snow') then
 	table.insert(big_stacks, 'snow:leaves')
+	table.insert(big_stacks, 'snow:needles')
 end
 
 for _,item in ipairs(big_stacks) do
