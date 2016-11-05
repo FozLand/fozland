@@ -46,8 +46,14 @@ minetest.register_craft({
 
 minetest.register_craft({
 	type = 'shapeless',
-	output = 'default:sand',
+	output = 'default:silver_sand',
 	recipe = {'default:desert_sand'}
+})
+
+minetest.register_craft({
+	type = 'shapeless',
+	output = 'default:sand',
+	recipe = {'default:silver_sand'}
 })
 
 -- Change the default TNT recipe to make it more expensive, but not too
