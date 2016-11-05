@@ -42,7 +42,11 @@ if minetest.get_modpath('snow') then
 end
 
 for _,item in ipairs(big_stacks) do
-	minetest.override_item(item, {
-		stack_max = 495,
-	})
+	if minetest.registered_items[item] then
+		minetest.override_item(item, {
+			stack_max = 495,
+		})
+	else
+		minetest.log('warning','[fozland] '..item..' is not a registered item.')	
+	end
 end
