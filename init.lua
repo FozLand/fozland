@@ -9,6 +9,7 @@ dofile(modpath..'/drop_leaves.lua')
 dofile(modpath..'/sawables.lua')
 dofile(modpath..'/other.lua')
 dofile(modpath..'/rightclick.lua')
+dofile(modpath..'/stone_with_ore.lua')
 
 minetest.log(
 	'action',
