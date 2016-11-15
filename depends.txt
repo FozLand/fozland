@@ -3,7 +3,7 @@ bakedclay
 bamboo
 colouredstonebricks
 wool
-moreores
+moreores?
 farming_plus?
 moreblocks?
 moretrees?
