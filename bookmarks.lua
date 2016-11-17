@@ -31,7 +31,7 @@ end
 minetest.register_chatcommand("setgo", {
 	params = "<name>",
 	description = "set /go destination",
-	privs = {server=true},
+	privs = {teleport=true},
 	func = function(name, param)
 		local target = minetest.env:get_player_by_name(name)
 		if target then
@@ -54,7 +54,7 @@ minetest.register_chatcommand("go", {
 minetest.register_chatcommand("delgo", {
 	params = "<name>",
 	description = "delete /go destination",
-	privs = {server=true},
+	privs = {teleport=true},
 	func = function(name, param)
 		if GONETWORK[param] then 
 			GONETWORK[param] = nil
@@ -64,6 +64,7 @@ minetest.register_chatcommand("delgo", {
 })
 minetest.register_chatcommand("listgo", {
 	params = "<goname>",
+	privs {teleport=true},
 	description = "list all go destinations",
 	func = function(name, param)
 		for go, coords in pairs(GONETWORK) do minetest.chat_send_player(name, "/go "..go.. ' at '..coords.x..','..coords.y..','..coords.z) end		
