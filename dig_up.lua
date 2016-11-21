@@ -23,6 +23,10 @@ if moretrees then
 	table.insert(dig_ups, 'moretrees:willow_trunk')
 end
 
+if fishing then
+	table.insert(dig_ups, 'fishing:seaweed')
+end
+
 for _,item in ipairs(dig_ups) do
 	minetest.override_item(item, {
 		after_dig_node = function(pos, node, meta, digger)

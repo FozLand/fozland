@@ -12,3 +12,4 @@ landrush?
 homedecor?
 cottages?
 drop_on_death?
+fishing?
