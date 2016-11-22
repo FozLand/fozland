@@ -85,3 +85,14 @@ minetest.register_craft({
 	output = 'mtfoods:sugar 6',
 	recipe = {'bushes:sugar'}
 })
+
+-- reverse recipe for obsidian_blocks
+
+minetest.register_craft({
+
+	output = 'default:obsidian 9',
+	recipe = {
+			{'default:obsidian_block', 'default:obsidian_block', 'default:obsidian_block'},
+			{'default:obsidian_block', 'default:obsidian_block', 'default:obsidian_block'},
+			{'default:obsidian_block', 'default:obsidian_block', 'default:obsidian_block'},
+})
