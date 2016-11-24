@@ -86,13 +86,17 @@ minetest.register_craft({
 	recipe = {'bushes:sugar'}
 })
 
--- reverse recipe for obsidian_blocks
+-- Provide reverse recipes for _block items.
+local types = {'stone', 'desert_stone', 'sandstone', 'obsidian'}
 
-minetest.register_craft({
-
-	output = 'default:obsidian 9',
-	recipe = {
-			{'default:obsidian_block', 'default:obsidian_block', 'default:obsidian_block'},
-			{'default:obsidian_block', 'default:obsidian_block', 'default:obsidian_block'},
-			{'default:obsidian_block', 'default:obsidian_block', 'default:obsidian_block'},
-})
+for _, name in pairs(types) do
+	local ing = 'default:'..name..'_block'
+	minetest.register_craft({
+		output = 'default:'..name..' 9',
+		recipe = {
+			{ing, ing, ing},
+			{ing, ing, ing},
+			{ing, ing, ing},
+		}
+	})
+end
