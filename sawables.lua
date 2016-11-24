@@ -61,4 +61,15 @@ if core.global_exists('stairsplus') then
 		stairsplus:register_all(mod, name, nodename, def)
 	end
 
+	-- _block items.
+	local mod = 'default'
+	local types = {'stone', 'desert_stone', 'sandstone', 'obsidian'}
+
+	for _, name in pairs(types) do
+		local nodename = mod..':'..name..'_block'
+		local def = table.copy(minetest.registered_nodes[nodename])
+		def.sunlight_propagates = true
+		stairsplus:register_all('moreblocks', name..'_block', nodename, def)
+	end
+
 end
