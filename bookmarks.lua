@@ -2,6 +2,16 @@
 -- 
 
 
+local function round(number)
+	-- Round numbers to the nearest integer. Numbers exactly between
+	-- two integers (ending in .5) are rounded away from zero.
+	if number >= 0.5 then
+		return math.floor(number + 0.5)
+	else
+		return math.ceil(number - 0.5)
+	end
+end
+
 local write_gofile = function() 
 	local output = ''  --	WRITE CHANGES TO FILE
 	for name, coords in pairs(GONETWORK) do 	output = output..name..':'..coords.x..','..coords.y..','..coords.z..';'	end
@@ -9,7 +19,6 @@ local write_gofile = function()
     f:write(output)
     io.close(f)
 end
-
 
 GONETWORK = {}
 local gonfile = io.open(minetest.get_worldpath()..'/bookmarks.go', 'r')  
@@ -23,7 +32,7 @@ if gonfile then
 			local p = {}
 			p.x, p.y, p.z = string.match(coords, '^([%d.-]+)[, ] *([%d.-]+)[, ] *([%d.-]+)$')
 			if p.x and p.y and p.z then
-				GONETWORK[goname] = {x = tonumber(p.x),y= tonumber(p.y),z = tonumber(p.z)}
+				GONETWORK[goname] = {x = round(tonumber(p.x)),y= round(tonumber(p.y)),z = round(tonumber(p.z))}
 			end
 		end
 	end
