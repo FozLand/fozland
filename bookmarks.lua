@@ -14,14 +14,14 @@ end
 
 local write_gofile = function() 
 	local output = ''  --	WRITE CHANGES TO FILE
-	for name, coords in pairs(GONETWORK) do 	output = output..name..':'..coords.x..','..coords.y..','..coords.z..';'	end
-	local f = io.open(minetest.get_worldpath()..'/bookmarks.go', 'w')
+	for name, coords in pairs(GONETWORK) do 	output = output..name..':'..round(coords.x)..','..round(coords.y)..','..round(coords.z)..';'	end
+	local f = io.open(minetest.get_worldpath()..'/bookmarks.txt', 'w')
     f:write(output)
     io.close(f)
 end
 
 GONETWORK = {}
-local gonfile = io.open(minetest.get_worldpath()..'/bookmarks.go', 'r')  
+local gonfile = io.open(minetest.get_worldpath()..'/bookmarks.txt', 'r')  
 if gonfile then
 	local contents = gonfile:read()
 	io.close(gonfile)
@@ -82,6 +82,6 @@ minetest.register_chatcommand('listgo', {
 	privs = {teleport = true},
 	description = 'list all go destinations',
 	func = function(name, param)
-		for go, coords in pairs(GONETWORK) do minetest.chat_send_player(name, '/go '..go.. ' at '..coords.x..','..coords.y..','..coords.z) end		
+		for go, coords in pairs(GONETWORK) do minetest.chat_send_player(name, '/go '..go.. ' at '..round(coords.x)..','..round(coords.y)..','..round(coords.z)) end		
 	end,
 })
