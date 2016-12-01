@@ -60,7 +60,15 @@ if core.global_exists('stairsplus') then
 		stairsplus:register_all(mod, name, nodename, def)
 	end
 	
+	--Drop stone slabs
 	
+	local mod = 'default'
+	local types = {'stone', 'desert_stone'}
+	for _, name in pairs(types) do
+		local nodename = mod..':'..name
+		minetest.registered_nodes[nodename].drop = nil
+	end
+		
 
 
 end
