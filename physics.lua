@@ -123,7 +123,6 @@ minetest.register_chatcommand('normal', {
 ---------------------------------------
 -- Special Case Physics Manipulators --
 ---------------------------------------
---[[ Temporarily disabled
 -- Freeze
 local freeze = {
 	hp_max = 1,
@@ -168,7 +167,6 @@ minetest.register_chatcommand('freeze', {
 		return true, p_name..' has been frozen.'
 	end,
 })
---]]
 
 -- Moonboots
 minetest.register_chatcommand('mb', {
