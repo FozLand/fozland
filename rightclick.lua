@@ -8,9 +8,9 @@ for name, def in pairs(minetest.registered_items) do
 			end
 
 			local node = minetest.get_node(pointed_thing.under)
-			local def = minetest.registered_nodes[node.name]
-			if def and def.on_rightclick then
-				return def.on_rightclick(pointed_thing.under, node, placer, itemstack)
+			local udef = minetest.registered_nodes[node.name]
+			if udef and udef.on_rightclick then
+				return udef.on_rightclick(pointed_thing.under, node, placer, itemstack)
 			else
 				return original_on_place(itemstack, placer, pointed_thing)
 			end

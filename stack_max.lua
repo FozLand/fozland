@@ -47,6 +47,6 @@ for _,item in ipairs(big_stacks) do
 			stack_max = 495,
 		})
 	else
-		minetest.log('warning','[fozland] '..item..' is not a registered item.')	
+		minetest.log('warning','[fozland] '..item..' is not a registered item.')
 	end
 end

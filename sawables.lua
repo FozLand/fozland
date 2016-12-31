@@ -4,12 +4,9 @@ if core.global_exists('stairsplus') then
 	              'blue', 'magenta', 'orange', 'violet', 'brown', 'pink',
 	              'dark_grey', 'dark_green'}
 
-	local mod = ''
-	local types = {}
-
 	-- Bakedclay
-	mod = 'bakedclay'
-	types = dyes
+	local mod = 'bakedclay'
+	local types = dyes
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
@@ -41,8 +38,8 @@ if core.global_exists('stairsplus') then
 	end
 
 	-- Wool
-	local mod = 'wool'
-	local types = dyes
+	mod = 'wool'
+	types = dyes
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
@@ -52,8 +49,8 @@ if core.global_exists('stairsplus') then
 	end
 
 	-- Moreores
-	local mod = 'moreores'
-	local types = {'silver_block', 'tin_block', 'mithril_block'}
+	mod = 'moreores'
+	types = {'silver_block', 'tin_block', 'mithril_block'}
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name
@@ -62,8 +59,8 @@ if core.global_exists('stairsplus') then
 	end
 
 	-- _block items.
-	local mod = 'default'
-	local types = {'stone', 'desert_stone', 'sandstone', 'obsidian'}
+	mod = 'default'
+	types = {'stone', 'desert_stone', 'sandstone', 'obsidian'}
 
 	for _, name in pairs(types) do
 		local nodename = mod..':'..name..'_block'
