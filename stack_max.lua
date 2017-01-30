@@ -1,5 +1,6 @@
 big_stacks = {
 	'default:cobble',
+	'default:desert_cobble',
 	'default:gravel',
 	'default:sand',
 	'default:desert_sand',
