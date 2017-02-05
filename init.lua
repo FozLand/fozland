@@ -11,6 +11,7 @@ dofile(modpath..'/other.lua')
 dofile(modpath..'/rightclick.lua')
 dofile(modpath..'/stone_with_ore.lua')
 dofile(modpath..'/physics.lua')
+dofile(modpath..'/doors.lua')
 
 minetest.log(
 	'action',

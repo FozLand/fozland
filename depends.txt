@@ -13,3 +13,5 @@ homedecor?
 cottages?
 drop_on_death?
 fishing?
+castle?
+mesecons_doors?

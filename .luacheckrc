@@ -8,4 +8,6 @@ read_globals = {
 	'fishing',
 	'moretrees',
 	'stairsplus',
+	'doors',
+	'mesecon'
 }
