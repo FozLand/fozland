@@ -37,17 +37,6 @@ if core.global_exists('stairsplus') then
 		stairsplus:register_all(mod, name, nodename, def)
 	end
 
-	-- Wool
-	mod = 'wool'
-	types = dyes
-
-	for _, name in pairs(types) do
-		local nodename = mod..':'..name
-		local def = table.copy(minetest.registered_nodes[nodename])
-		def.groups.wool = nil
-		stairsplus:register_all(mod, name, nodename, def)
-	end
-
 	-- Moreores
 	mod = 'moreores'
 	types = {'silver_block', 'tin_block', 'mithril_block'}
