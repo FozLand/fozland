@@ -103,6 +103,7 @@ local blocks = {
 		"pine_tree", "pine_wood", "acacia_tree", "acacia_wood",
 		"obsidian", "obsidian_glass",
 		"stonebrick", "desert_stonebrick", "sandstonebrick", "obsidianbrick",
+		"stone_block", "desert_stone_block", "sandstone_block", "obsidian_block",
 	},
 }
 
