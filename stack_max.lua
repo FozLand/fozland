@@ -42,6 +42,9 @@ if minetest.get_modpath('snow') then
 	table.insert(big_stacks, 'snow:needles')
 end
 
+--Stonework
+table.insert(big_stacks, 'fozland:setts')
+
 for _,item in ipairs(big_stacks) do
 	if minetest.registered_items[item] then
 		minetest.override_item(item, {

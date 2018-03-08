@@ -47,4 +47,14 @@ if core.global_exists('stairsplus') then
 		stairsplus:register_all(mod, name, nodename, def)
 	end
 
+	-- Stonework
+	mod = 'fozland'
+	types = {'setts', 'gneiss'}
+
+	for _, name in pairs(types) do
+		local nodename = mod..':'..name
+		local def = table.copy(minetest.registered_nodes[nodename])
+		stairsplus:register_all(mod, name, nodename, def)
+	end
+
 end
