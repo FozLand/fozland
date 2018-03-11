@@ -13,6 +13,7 @@ dofile(modpath..'/rightclick.lua')
 dofile(modpath..'/stone_with_ore.lua')
 dofile(modpath..'/physics.lua')
 dofile(modpath..'/doors.lua')
+dofile(modpath..'/admin_wand.lua')
 
 local count = 0
 for _ in pairs(minetest.registered_nodes) do
