@@ -11,7 +11,6 @@ minetest.register_node('fozland:gneiss', {
 	tiles = {'fozland_gneiss.png'},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 1},
-	drop = 'default:cobble',
 	sounds = default.node_sound_stone_defaults(),
 })
 
