@@ -103,10 +103,12 @@ minetest.register_chatcommand('jump', {
 minetest.register_chatcommand('normal', {
 	params = '[player]',
 	description = 'Sets a players physics overrides to normal values.',
-	privs = {physics = true},
+	privs = {interact = true},
 	func = function(name, p_name)
 		if p_name == '' or p_name == nil then
 			p_name = name
+		elseif not minetest.check_player_privs(name, {physics=true}) then
+			return false, 'You need the physics privilege to do this.'
 		end
 		local player = minetest.get_player_by_name(p_name)
 		if not player then
@@ -174,10 +176,12 @@ minetest.register_chatcommand('freeze', {
 minetest.register_chatcommand('mb', {
 	params = '[player]',
 	description = 'Set a players gravity to a moon like value.',
-	privs = {physics = true},
+	privs = {interact = true},
 	func = function(name, p_name)
 		if p_name == '' or p_name == nil then
 			p_name = name
+		elseif not minetest.check_player_privs(name, {physics=true}) then
+			return false, 'You need the physics privilege to give a player moon boots.'
 		end
 		local player = minetest.get_player_by_name(p_name)
 		if not player then
