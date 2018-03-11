@@ -1,21 +1,24 @@
 dig_ups = {
-	'default:tree',
-	'default:jungletree',
-	'default:pine_tree',
 	'default:acacia_tree',
 	'default:aspen_tree',
 	'default:cactus',
-	'default:papyrus'
+	'default:jungletree',
+	'default:papyrus',
+	'default:pine_tree',
+	'default:tree',
 }
 
 if moretrees then
 	table.insert(dig_ups, 'moretrees:apple_tree_trunk')
 	table.insert(dig_ups, 'moretrees:beech_trunk')
 	table.insert(dig_ups, 'moretrees:birch_trunk')
+	table.insert(dig_ups, 'moretrees:cedar_trunk')
+	table.insert(dig_ups, 'moretrees:date_palm_trunk')
 	table.insert(dig_ups, 'moretrees:fir_trunk')
 	table.insert(dig_ups, 'moretrees:jungletree_trunk')
 	table.insert(dig_ups, 'moretrees:oak_trunk')
 	table.insert(dig_ups, 'moretrees:palm_trunk')
+	table.insert(dig_ups, 'moretrees:poplar_trunk')
 	table.insert(dig_ups, 'moretrees:rubber_tree_trunk')
 	table.insert(dig_ups, 'moretrees:rubber_tree_trunk_empty')
 	table.insert(dig_ups, 'moretrees:sequoia_trunk')
