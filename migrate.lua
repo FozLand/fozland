@@ -94,17 +94,6 @@ local blocks = {
 	},
 	bamboo = {"block", "block_dry"},
 	castle = {"pavement"},
-	default = {
-		"stone", "cobble", "mossycobble", "brick", "sandstone",
-		"steelblock", "goldblock", "copperblock", "bronzeblock", "diamondblock",
-		"desert_stone", "desert_cobble",
-		"meselamp", "glass",
-		"tree", "wood", "jungletree", "junglewood",
-		"pine_tree", "pine_wood", "acacia_tree", "acacia_wood",
-		"obsidian", "obsidian_glass",
-		"stonebrick", "desert_stonebrick", "sandstonebrick", "obsidianbrick",
-		"stone_block", "desert_stone_block", "sandstone_block", "obsidian_block",
-	},
 }
 
 for mod,varieties in pairs(blocks) do
