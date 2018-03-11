@@ -14,10 +14,15 @@ dofile(modpath..'/stone_with_ore.lua')
 dofile(modpath..'/physics.lua')
 dofile(modpath..'/doors.lua')
 
+local count = 0
+for _ in pairs(minetest.registered_nodes) do
+	count = count + 1
+end
 minetest.log(
 	'action',
 	string.format(
-		'['..minetest.get_current_modname()..'] loaded in %.3fs',
+		'['..minetest.get_current_modname()..'] loaded in %.3fs '..
+		'('..count..') registered nodes',
 		os.clock() - load_time_start
 	)
 )
