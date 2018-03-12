@@ -2,7 +2,7 @@ fozland = {}
 
 minetest.register_tool('fozland:admin_wand', {
 	description = 'Admin Magic Wand',
-	groups = {},
+	groups = {not_in_creative_inventory=1},
 	inventory_image = 'default_torch_on_floor.png',
 	wield_image = '',
 	wield_scale = {x=1,y=1,z=1},
