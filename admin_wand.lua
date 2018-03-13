@@ -18,14 +18,17 @@ minetest.register_tool('fozland:admin_wand', {
 	end,
 })
 
-fozland.wand = function(itemstack, user, pointed_thing, mode) 
+fozland.wand = function(itemstack, user, pointed_thing, mode)
 	local pos  = minetest.get_pointed_thing_position(pointed_thing, mode)
+	if not pos then return end
 	local objs = minetest.get_objects_inside_radius(pos, 0.6)
 	print("Found " .. #objs .. " objects.")
 	for i,obj in ipairs(objs) do
 		if obj and obj:get_luaentity() then
 			local props = obj:get_properties()
-			minetest.log("warning", string.format("%3d: ",i) .. 
+			--minetest.chat_send_all(string.format("%3d: ",i) ..
+				--obj:get_luaentity().name .. " " .. dump(props.textures[1]))
+			print(string.format("%3d: ",i) ..
 				obj:get_luaentity().name .. " " .. dump(props.textures[1]))
 		end
 	end
