@@ -12,19 +12,19 @@ end
 -- Make strip mining unnecessary
 minetest.register_craft({
 	type = 'shapeless',
-	output = 'default:gravel',
+	output = 'default:gravel 2',
 	recipe = {'default:cobble', 'default:cobble'}
 })
 
 minetest.register_craft({
 	type = 'shapeless',
-	output = 'default:sand',
+	output = 'default:sand 2',
 	recipe = {'default:gravel', 'default:gravel'}
 })
 
 minetest.register_craft({
 	type = 'shapeless',
-	output = 'default:clay',
+	output = 'default:clay 2',
 	recipe = {'group:sand', 'group:sand'}
 })
 
